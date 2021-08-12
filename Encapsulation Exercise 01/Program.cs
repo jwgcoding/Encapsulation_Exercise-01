@@ -41,7 +41,7 @@ namespace Encapsulation_Exercise_01
 
 
 
-            // Thought Experiment: How would you access the myVar variable and print it out to the console?
+            // Thought Experiment: How would you access the private myVar variable and print it out to the console?
             // TODO: Console.WriteLine(MyProperty); 
             // Why: ? Because the property is public, it is not encapsulated, therefore we can access it directly. And when we call it's getter method, we return myVar
 
