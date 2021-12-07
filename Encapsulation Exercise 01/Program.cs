@@ -16,20 +16,14 @@ namespace Encapsulation_Exercise_01
         // BONUS
         // TODO: Create 1 private readonly field called _secret of type string
         // Thought Experiment: How can you initialize this field with a value?
-        // Answer Here: In a field declaration, readonly indicates that assignment to the field can only occur as part of the declaration or in a constructor in the same class. 
+        // Answer Here:  
         // TODO: Assign a value to the _secret field
 
         #endregion
 
 
         #region// TODO: Create a FULL PROPERTY by using the code snippet: type propfull and then press tab twice (propfull + tab + tab)
-        private int myVar;
-
-        public int MyProperty
-        {
-            get { return myVar; }
-            set { myVar = value; }
-        }
+        
 
         #endregion
 
@@ -42,8 +36,8 @@ namespace Encapsulation_Exercise_01
 
 
             // Thought Experiment: How would you access the private myVar variable and print it out to the console?
-            // TODO: Console.WriteLine(MyProperty); 
-            // Why: ? Because the property is public, it is not encapsulated, therefore we can access it directly. And when we call it's getter method, we return myVar
+            // TODO:  
+            // Why: ? 
 
 
 
