@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 
 namespace Encapsulation_Exercise_01
 {
@@ -20,10 +22,90 @@ namespace Encapsulation_Exercise_01
         // TODO: Assign a value to the _secret field
 
         #endregion
+        class PII_Info
+        {
+            private int _userId;
+            private string _privateKey;
+            private decimal _wallet;
+            private bool _isAuthenticated;
+
+            private string UserName { get; set; }
+            private string Password { get; set; }   
+
+
+            public int GetUserId()
+            {
+                return _userId;
+            }
+
+            public string GetKey()
+            {
+                return _privateKey;
+            }
+            public decimal Amount()
+            {
+                return _wallet;
+            }
+            public bool Authenticate()
+            {
+                return _isAuthenticated;
+            }
+
+
+            public void UserId(int userID)
+            {
+                _userId = userID;
+            }
+            public void PrivateKey(string key)
+            {
+                _privateKey = key;
+            }
+            public void Wallet(decimal wallet)
+            {
+                _wallet = wallet;
+            }
+            public void IsAuthenticated(bool authenticate)
+            {
+                _isAuthenticated = authenticate;
+            }
+
+            public void SetInfo(string username, string password)
+            {
+                UserName = username;
+                Password = password;    
+            }
+            private readonly string _secret;
+
+            public PII_Info(string secret)
+            {
+                _secret = secret;   
+            }
+            private void InformationReport()
+            {
+                Console.WriteLine($"Username: {UserName}\n" +
+                    $"Password: {Password}\n" +
+                    $"User ID: {_userId}\n" +
+                    $"Private Key: {_privateKey}\n" +
+                    $"Wallet: {string.Format(_wallet.ToString())}\n" +
+                    $"Is Authenticated: {_isAuthenticated}\n\n" +
+                    $"Secret: {_secret}\n");
+                    Console.WriteLine();
+                Console.WriteLine();
+            }
+            
+        }
+
 
 
         #region// TODO: Create a FULL PROPERTY by using the code snippet: type propfull and then press tab twice (propfull + tab + tab)
-        
+
+        private int myVar;
+
+        public int MyProperty
+        {
+            get { return myVar; }
+            set { myVar = value; }
+        }
 
         #endregion
 
